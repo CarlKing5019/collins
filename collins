@@ -63,6 +63,7 @@ def get_text(url):
         text1 = re.sub(r'(\s+?→\s+)', r'  →  ', text1)
         text1 = re.sub('(\")', '\'', text1)
         text1 = re.sub('\s{10}\s+', '', text1)
+        # text1 = re.sub(r'(例.*[A-z]\.)', r'\1\n译：', text1)
         expl += text1
 
     # -----------------word_group--------------------
@@ -187,6 +188,9 @@ def colorful_print(raw):
                 print(colored(line, 'red'))
                 continue
             elif line.startswith('例'):
+                print(line)
+                continue
+            elif line.startswith('译'):
                 print(line)
                 continue
             elif line.startswith('【'):
