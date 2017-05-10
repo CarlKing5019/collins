@@ -2,16 +2,11 @@
 命令行版本的柯林斯词典.
 
 
-### Installation
+### Installation and usage
 克隆或者下载项目文件夹, 然后使用 `make` 命令
 
 ```
-make install
-```
-
-### Usage
-
-```
+$ make install
 $ collins love
 ```
 
